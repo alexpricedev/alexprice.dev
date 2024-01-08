@@ -1,9 +1,7 @@
-type Props = {
-  children?: React.ReactNode
-}
+import { PropsWithChildren } from "react";
 
-const Container = ({ children }: Props) => {
-  return <div className="container mx-auto px-5">{children}</div>
-}
+type Props = PropsWithChildren & {};
 
-export default Container
+export const Container = ({ children }: Props) => (
+  <div className="container mx-auto px-5">{children}</div>
+);
