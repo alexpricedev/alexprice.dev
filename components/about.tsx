@@ -2,7 +2,7 @@ import { DisplayHeading } from "./display-heading";
 import { Dot } from "./dot";
 
 export const About = () => (
-  <section className="mb-16">
+  <section className="mb-16 max-w-[800px]">
     <DisplayHeading as="h2" className="mb-8 text-4xl md:text-6xl font-bold">
       About
       <Dot />

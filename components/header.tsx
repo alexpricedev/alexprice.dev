@@ -3,8 +3,8 @@ import Link from "next/link";
 import { DisplayHeading } from "./display-heading";
 import { Dot } from "./dot";
 
-export const Header = () => {
-  return (
+export const Header = () => (
+  <div className="text-center sm:text-left">
     <DisplayHeading
       as="h2"
       className="text-2xl md:text-4xl mb-20 mt-8 underline"
@@ -15,5 +15,5 @@ export const Header = () => {
         dev
       </Link>
     </DisplayHeading>
-  );
-};
+  </div>
+);

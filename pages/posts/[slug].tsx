@@ -18,7 +18,7 @@ type Props = {
   morePosts: PostType[];
 };
 
-export default function Post({ post }: Props) {
+const PostPage = ({ post }: Props) => {
   const router = useRouter();
   const title = `${post.title} | Alex Price - CTO`;
 
@@ -47,7 +47,9 @@ export default function Post({ post }: Props) {
       </Container>
     </Layout>
   );
-}
+};
+
+export default PostPage;
 
 type Params = {
   params: {
@@ -58,12 +60,12 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
-    "date",
     "slug",
     "content",
     "ogImage",
     "coverImage",
   ]);
+
   const content = await markdownToHtml(post.content || "");
 
   return {

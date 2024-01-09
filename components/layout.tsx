@@ -1,18 +1,16 @@
+import { PropsWithChildren } from "react";
+
 import { Footer } from "./footer";
 import { Meta } from "./meta";
 
-type Props = {
-  children: React.ReactNode;
-};
+type Props = PropsWithChildren;
 
-export const Layout = ({ children }: Props) => {
-  return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
-  );
-};
+export const Layout = ({ children }: Props) => (
+  <>
+    <Meta />
+    <div className="min-h-screen min-w-[300px]">
+      <main>{children}</main>
+    </div>
+    <Footer />
+  </>
+);

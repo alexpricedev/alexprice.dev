@@ -1,0 +1,6 @@
+.button {
+  @apply inline-block;
+  @apply font-bold hover:underline;
+  @apply border-black border-2;
+  @apply px-5 py-3;
+}
