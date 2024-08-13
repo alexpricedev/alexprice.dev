@@ -12,7 +12,7 @@ export const Intro = () => (
       dev
     </DisplayHeading>
     <h4 className="text-md md:text-lg">
-      Customer-obsessed technologist, leader and entrepreneur.
+      Product technologist, leader and strategist.
     </h4>
   </section>
 );

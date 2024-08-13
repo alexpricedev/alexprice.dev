@@ -2,26 +2,25 @@ import { DisplayHeading } from "./display-heading";
 import { Dot } from "./dot";
 
 export const About = () => (
-  <section className="mb-16 max-w-[800px]">
+  <section className="mb-16">
     <DisplayHeading as="h2" className="mb-8 text-4xl md:text-6xl font-bold">
       About
       <Dot />
     </DisplayHeading>
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-[600px] mb-8">
       <p>
-        Lorem ipsum dolor sit amet, ex omnium epicuri scribentur vim, minimum
-        eligendi eum id. Usu soleat regione cu, cum cu veri nullam platonem.
-        Docendi accommodare mei an. Ea populo posidonium nec, eam natum invenire
-        cu. Usu in utamur conclusionemque, eam ut mandamus efficiantur. Eum cibo
+        I've dedicated the last decade to solving complex customer problems with
+        software and technology.
       </p>
       <p>
-        adipisci consequat at, id usu tation aliquid fabulas. Ad ubique legimus
-        sea, eu habemus inimicus ius. Nec in enim docendi vivendum. Te vim
-        graeci abhorreant. At nec iudico iracundia, euripidis prodesset et pro.
-        Liber lucilius pericula ne sea, ius suscipit explicari reprehendunt et,
-        no ius labitur forensibus. Duo eu virtute sensibus suscipiantur, brute
-        commodo ornatus sit cu. Duis propriae sadipscing ei mea, erat facer
-        nostrud mel ex. Vis ei magna conceptam. Indoctum tractatos definitionem
+        My leadership style is built on setting strong processes, charting a
+        clear path to success, empowering my team and stoking a shared delight
+        in delivering value.
+      </p>
+      <p>
+        I am recognised for my lens of entrepreneurial foundership, my
+        relentless return to first-principles thinking and my commitment to
+        personal integrity.
       </p>
     </div>
   </section>

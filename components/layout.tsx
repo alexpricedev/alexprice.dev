@@ -8,7 +8,7 @@ type Props = PropsWithChildren;
 export const Layout = ({ children }: Props) => (
   <>
     <Meta />
-    <div className="min-h-screen min-w-[300px]">
+    <div className="min-w-[300px]">
       <main>{children}</main>
     </div>
     <Footer />
