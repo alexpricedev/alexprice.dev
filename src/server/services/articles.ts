@@ -1,7 +1,18 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import matter from "gray-matter";
-import { marked } from "marked";
+import { Marked } from "marked";
+
+// Article links should open in a new tab, keeping the reader on the site.
+const marked = new Marked({
+  renderer: {
+    link({ href, title, tokens }) {
+      const text = this.parser.parseInline(tokens);
+      const titleAttr = title ? ` title="${title}"` : "";
+      return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
+    },
+  },
+});
 
 export type ArticlePillar =
   | "scaling"
@@ -72,7 +83,7 @@ function parseArticle(filePath: string, slug: string): Article {
   const { data, content } = matter(fileContent);
   const frontmatter = data as Frontmatter;
 
-  const htmlContent = marked(content) as string;
+  const htmlContent = marked.parse(content) as string;
   const readingTime = calculateReadingTime(content);
 
   return {
